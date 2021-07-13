@@ -77,14 +77,14 @@
             {{ csrf_field() }} 
           
             <div class="my-1 row">                 
-              <label for="validationCustom01" class="col-4 col-form-label">Issued Tot Qty-Rack</label>
+              <label class="col-4 col-form-label">Issued Tot Qty-Rack</label>
               <div class="col-5">                    
                 <input type="number" class="form-control in-field-color ml-4" id="isissuedTotalQuantity" name="isissuedTotalQuantity" placeholder="Number" required>
               </div>                    
             </div>                 
 
             <div class="my-1 row">
-              <label for="validationTooltip1" class="col-4 col-form-label">Allocated Rack</label>
+              <label  class="col-4 col-form-label">Allocated Rack</label>
               <div class="col-5">
                 <select class="custom-select in-field-color ml-4" id="isallocatedRack" name="isallocatedRack" value="" required>
                   <option value="">Allocated Rack</option>
@@ -98,7 +98,7 @@
             </div>
 
             <div class="my-1 row">
-              <label for="validationTooltip1" class="col-4 col-form-label">Allocated Bin</label>
+              <label  class="col-4 col-form-label">Allocated Bin</label>
               <div class="col-5">
                 <select class="custom-select in-field-color ml-4" id="isallocatedBin" name="isallocatedBin" value="" required>
                   <option value="">Allocated Bin</option>
@@ -112,21 +112,21 @@
             </div>
 
             <div class="my-1 row">                 
-              <label for="validationCustom01" class="col-4 col-form-label">Issued Batch No</label>
+              <label class="col-4 col-form-label">Issued Batch No</label>
               <div class="col-5">                    
                 <input type="text" class="form-control in-field-color ml-4" id="isissuedBatchNo" name="isissuedBatchNo" placeholder="Number" required>
               </div>                    
             </div>                 
 
             <div class="my-1 row">                 
-              <label for="validationCustom01" class="col-4 col-form-label">Issued Quantity</label>
+              <label class="col-4 col-form-label">Issued Quantity</label>
               <div class="col-5">                    
                 <input type="number" class="form-control in-field-color ml-4" id="isissuedQuantity" name="isissuedQuantity" placeholder="Number" required>
               </div>                    
             </div>                 
 
             <div class="my-1 row">                 
-              <label for="validationCustom01" class="col-4 col-form-label">Issued Rolls Count</label>
+              <label class="col-4 col-form-label">Issued Rolls Count</label>
                 <div class="col-5">                    
                   <input type="number" class="form-control  in-field-color ml-4" id="isissuedRollsCount" name="isissuedRollsCount" placeholder="Number" required>
                 </div>                    
@@ -309,7 +309,7 @@
         <hr style="height: 2px; background-color:#aeaeb9"/>
         <div class="h6"> <!--d9-->
           <div class="my-1 row">
-            <label for="validationTooltip1" class="col-3 col-form-label">Style/Itemn</label>
+            <label  class="col-3 col-form-label">Style/Itemn</label>
             <div class="col-5 ml-4 input-group">
               <select class="custom-select in-field-color input-lg dynamic"  oninput="getStyleId()" id="style" name="istyle" data-dependent="GRN_NO">
                 <option value="">--Select Style--</option>
@@ -329,7 +329,7 @@
             }
           </script>
           <div class="my-1 row">
-            <label for="validationTooltip1" class="col-3 col-form-label ">Delivery</label>
+            <label  class="col-3 col-form-label ">Delivery</label>
             <div class="col-5 ml-4">
               <select class="custom-select in-field-color dynamic" data-dependent="GRN_NO" id="delvDate" name="idelvDate" required>
                 <option value="">--Select--Delivery--</option>
@@ -339,7 +339,7 @@
           </div>
 
           <div class="my-1 row">
-            <label for="validationTooltip1" class="col-3 col-form-label">GRN</label>
+            <label  class="col-3 col-form-label">GRN</label>
             <div class="col-5 ml-4 input-group">
               <select class="custom-select in-field-color input-lg dynamic" data-dependent="PO_Main_Category" id="GRN_NO" name="igrnNo" value="">
                 <option value="">--Select GRN--</option>
@@ -352,7 +352,7 @@
           </div>
 
           <div class="my-1 row">
-            <label for="validationTooltip1" class="col-3 col-form-label">Category</label>
+            <label  class="col-3 col-form-label">Category</label>
               <div class="col-5 ml-4 input-group">
                 <select class="custom-select in-field-color dynamic" data-dependent="PO_Item_Type" id="PO_Main_Category" name="icategory" value="" required>
                   <option value="">--Select Category--</option>
@@ -361,7 +361,7 @@
               </div>
 
           <div class="my-1 row">
-            <label for="validationTooltip1" class="col-3 col-form-label">Item Type</label>
+            <label  class="col-3 col-form-label">Item Type</label>
             <div class="col-5 ml-4 input-group">
               <select class="custom-select in-field-color dynamic" data-dependent="PO_Item_Category" id="PO_Item_Type" name="iitemType" value="" required>
                 <option value="">--Select Item Type--</option>
@@ -374,7 +374,7 @@
           </div>
 
           <div class="my-1 row">
-            <label for="validationTooltip1" class="col-3 col-form-label">Item Category</label>
+            <label  class="col-3 col-form-label">Item Category</label>
             <div class="col-5 ml-4 input-group">
                 <select class="custom-select in-field-color dynamic" data-dependent="color" id="PO_Item_Category" name="iitemCategory" value="" required>
                   <option value="">--Select Item Category--</option>
@@ -387,7 +387,7 @@
           </div>
 
           <div class="my-1 row">
-            <label for="validationTooltip1" class="col-3 col-form-label">Color</label>
+            <label  class="col-3 col-form-label">Color</label>
               <div class="col-5 ml-4 input-group">
                 <select class="custom-select  in-field-color" id="color" name="icolor" value="" required>
                   <option value="">--Select --</option>
@@ -400,7 +400,7 @@
             </div>
 
           <div class="my-1 row">                 
-            <label for="validationCustom01" class="col-3 col-form-label">Description</label>
+            <label class="col-3 col-form-label">Description</label>
             <div class="col-6 ml-4 input-group">                    
               <textarea class="form-control rounded-5  in-field-color" id="idescription" name="idescription" placeholder="description" rows="3" col="50" required></textarea>      
             </div>                    
@@ -421,7 +421,7 @@
           </div>
 
           <div class="my-1 row">                 
-            <label for="validationCustom01" class="col-3 col-form-label">Roll Count</label>
+            <label class="col-3 col-form-label">Roll Count</label>
             <div class="col-5 ml-4 input-group">                    
               <input type="number" class="form-control in-field-color" id="irollCount" name="irollCount" placeholder="Number" required>
             </div>                    
@@ -437,14 +437,14 @@
           </div>                  
 
           <div class="my-1 row">
-            <label for="validationCustom01" class="col-3 col-form-label">Total Rolls Issued</label>
+            <label class="col-3 col-form-label">Total Rolls Issued</label>
             <div class="col-5 ml-4 input-group"> 
               <input type="number" class="form-control in-field-color" id="itotalRollsIssued" name="itotalRollsIssued" disabled>
             </div>
           </div> 
 
           <div class="my-1 row"> 
-            <label for="validationCustom01" class="col-3 col-form-label">Remark</label>
+            <label class="col-3 col-form-label">Remark</label>
               <div class="col-6 ml-4 input-group"> 
                 <textarea class="form-control rouremarknded-5 in-field-color" id="iremark" name="iremark" placeholder="Remark" rows="3" col="50" required></textarea>
               </div> 
@@ -455,10 +455,14 @@
 
             <div class="text-center my-2">
             <center>
-              <a type="button" class="w3-button w3-hover-black w3-dark-grey w3-round-xxlarge" href="{{url('/show_issue_allocate_bin')}}"  data-toggle="modal" data-target=".bd-example-modal-lg" style="background-color: #e6951d;  width:200px; height:35px; padding: px; color:white;">
+              <a type="button" class="w3-button w3-hover-black w3-dark-grey w3-round-xxlarge" href="/create-issue-bin-allocate" style="background-color: #e6951d;  width:200px; height:35px; padding: px; color:white;">
                 <i class="bi bi-plus-circle"></i>
-                Allocate Bin Location</a>
-          
+                Allocate Bin Location
+              </a>
+              {{-- <a type="button" class="w3-button " href="/create-issue-bin-allocate"  data-toggle="modal" data-target=".bd-example-modal-lg" style="background-color: #e6951d;  width:200px; height:35px; padding: px; color:white;">
+                <i class="bi bi-plus-circle"></i>
+                Allocate Bin Location
+              </a> --}}
               <a type="button" class="w3-button w3-hover-black w3-blue w3-round-xxlarge" href="{{url('/view-issue-allocate-bin')}}" style="background-color: #e6951d;  width:220px; height:35px; padding: 5px; color:white;">
                 <i class="bi bi-binoculars-fill viewdedign"></i>
                 View Allocated Bin Location</a>
@@ -746,22 +750,22 @@
           </button>
         </div>
         <div class="">
-       
+      
         <div class="modal-body">
           <div class="container">
             <div class="h6 px-2"> <!--d9-->
-              <form method="post" action="">
+              <form method="post" action="{{ route('store_issue_allocate_bin')}}">
               {{ csrf_field() }} 
             
               <div class="my-1 row">                 
-                <label for="validationCustom01" class="col-4 col-form-label">Issued Tot Qty-Rack</label>
+                <label class="col-4 col-form-label">Issued Tot Qty-Rack</label>
                 <div class="col-5">                    
                   <input type="number" class="form-control in-field-color ml-4" id="isissuedTotalQuantity" name="isissuedTotalQuantity" placeholder="Number" required>
                 </div>                    
               </div>                 
 
               <div class="my-1 row">
-                <label for="validationTooltip1" class="col-4 col-form-label">Allocated Rack</label>
+                <label  class="col-4 col-form-label">Allocated Rack</label>
                 <div class="col-5">
                   <select class="custom-select in-field-color ml-4" id="isallocatedRack" name="isallocatedRack" value="" required>
                     <option value="">Allocated Rack</option>
@@ -775,7 +779,7 @@
               </div>
 
               <div class="my-1 row">
-                <label for="validationTooltip1" class="col-4 col-form-label">Allocated Bin</label>
+                <label  class="col-4 col-form-label">Allocated Bin</label>
                 <div class="col-5">
                   <select class="custom-select in-field-color ml-4" id="isallocatedBin" name="isallocatedBin" value="" required>
                     <option value="">Allocated Bin</option>
@@ -789,21 +793,21 @@
               </div>
 
               <div class="my-1 row">                 
-                <label for="validationCustom01" class="col-4 col-form-label">Issued Batch No</label>
+                <label class="col-4 col-form-label">Issued Batch No</label>
                 <div class="col-5">                    
                   <input type="text" class="form-control in-field-color ml-4" id="isissuedBatchNo" name="isissuedBatchNo" placeholder="Number" required>
                 </div>                    
               </div>                 
 
               <div class="my-1 row">                 
-                <label for="validationCustom01" class="col-4 col-form-label">Issued Quantity</label>
+                <label class="col-4 col-form-label">Issued Quantity</label>
                 <div class="col-5">                    
                   <input type="number" class="form-control in-field-color ml-4" id="isissuedQuantity" name="isissuedQuantity" placeholder="Number" required>
                 </div>                    
               </div>                 
 
               <div class="my-1 row">                 
-                <label for="validationCustom01" class="col-4 col-form-label">Issued Rolls Count</label>
+                <label class="col-4 col-form-label">Issued Rolls Count</label>
                   <div class="col-5">                    
                     <input type="number" class="form-control  in-field-color ml-4" id="isissuedRollsCount" name="isissuedRollsCount" placeholder="Number" required>
                   </div>                    
