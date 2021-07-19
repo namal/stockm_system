@@ -1,6 +1,5 @@
 @extends('admin.stock_manage_admin_dash')
 @section('admin')
-
 <div class="container-responsive mx-0"> <!--d1-->
     <h3 class="m-0 pt-0 mb-3 w3-animate-left">
         <span class="font-weight-bold">View - </span>
@@ -33,7 +32,7 @@
         </a>
     </div>
     
-        <div class="" style="">
+        <div class="" style="" >
             <table class="table table-responsive caption-top table-hover table-bordered text-center" id="myTable">
                 <caption>List of racks created</caption>
                 <thead class=" text-center text-white" style="background:rgb(68, 68, 87); color: rgb(196, 193, 193)">
@@ -80,6 +79,10 @@
                 {!! $racks->links() !!}
               </div>
     </div>
+
+
+   
+
     </div>
 </div>
 

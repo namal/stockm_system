@@ -42,19 +42,19 @@ Route::get('/create-issuedOne', [App\Http\Controllers\Stock_Management_Issued::c
 Route::post('/issued/fetch', [App\Http\Controllers\Stock_Management_Issued::class, 'fetch'])->name('issued.fetch');
 Route::post('/issued/fetch2', [App\Http\Controllers\Stock_Management_Issued::class, 'fetch2'])->name('issued.fetch2');
 
-Route::get('/view-issued', [App\Http\Controllers\Stock_Management_Issued::class, 'search_issue'])->name('search_issue');
+// Route::get('/view-issued', [App\Http\Controllers\Stock_Management_Issued::class, 'search_issue'])->name('search_issue');
 Route::get('/view-issued-', [App\Http\Controllers\Stock_Management_Issued::class, 'search_rackname'])->name('search_rackname');
 /*=========== edit rack==========*/
 Route::get('/edit-issued/{id}', [App\Http\Controllers\Stock_Management_Issued::class, 'edit_issue'])->name('edit_issue');
 Route::post('/update-issued/{id}', [App\Http\Controllers\Stock_Management_Issued::class, 'update_issue'])->name('update_issue');
 Route::delete('/delete-issued/{id}', [App\Http\Controllers\Stock_Management_Issued::class, 'delete_issue'])->name('delete_issue');
 /*==========search rack ===========*/
-Route::get('/view-issued', [App\Http\Controllers\Stock_Management_Issued::class, 'search_company'])->name('search_company');
+// Route::get('/view-issued', [App\Http\Controllers\Stock_Management_Issued::class, 'search_company'])->name('search_company');
 Route::get('/view-issued-', [App\Http\Controllers\Stock_Management_Issued::class, 'search_rackname'])->name('search_rackname');
 
-Route::get('/create-issue-allocate-bin', [App\Http\Controllers\StockManagement_Issue_Bin_Allocation::class, 'create_issue_allocate_bin'])->name('create_issue_allocate_bin');
-Route::post('/create-issue-allocate-bin', [App\Http\Controllers\StockManagement_Issue_Bin_Allocation::class, 'store_issue_allocate_bin'])->name('store_issue_allocate_bin');
-Route::get('/view-issue-allocate-bin', [App\Http\Controllers\StockManagement_Issue_Bin_Allocation::class, 'show_issue_allocate_bin'])->name('show_issue_allocate_bin');
+// Route::get('/create-issue-allocate-bin', [App\Http\Controllers\StockManagement_Issue_Bin_Allocation::class, 'create_issue_allocate_bin'])->name('create_issue_allocate_bin');
+// Route::post('/create-issue-allocate-bin', [App\Http\Controllers\StockManagement_Issue_Bin_Allocation::class, 'store_issue_allocate_bin'])->name('store_issue_allocate_bin');
+// Route::get('/view-issue-allocate-bin', [App\Http\Controllers\StockManagement_Issue_Bin_Allocation::class, 'show_issue_allocate_bin'])->name('show_issue_allocate_bin');
 
 Route::get('/modal-issue-bin', function () {
 	return view('/stock_management_modal_issue_bin_allocation');
@@ -154,14 +154,15 @@ Route::get('/create-issue-bin-allocate', function () {
 
 /*==========issue-bin-allocate==========*/
 Route::get('/view-issue-bin-allocate_all', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'show_issue_allocate_bin'])->name('show_issue_allocate_bin');
+Route::get('/print-issue-bin-allocate_all', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'print_issue_allocate_bin'])->name('print_issue_allocate_bin');
 Route::get('/create-issue-bin-allocate', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'create_issue_allocate_bin'])->name('create_issue_allocate_bin');
 // Route::get('/create-issue-bin-allocate', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'getRackCompanies'])->name('getRackCompanies');
 Route::post('/create-issue-bin-allocate', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'store_issue_allocate_bin'])->name('store_issue_allocate_bin');
 // Route::get('/rack-bin', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'select_country']);
 /*=========== edit issue-bin-allocate==========*/
-// Route::get('/edit-issue-bin-allocate/{id}', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'edit_rack'])->name('edit_rack');
-// Route::post('/update-v/{id}', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'update_rack'])->name('update_rack');
-// Route::delete('/delete-issue-bin-allocate/{id}', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'delete_rack'])->name('delete_rack');
+Route::get('/edit/{id}', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'edit_issue_bin_allocation'])->name('edit_issue_bin_allocation');
+Route::post('/update/{id}', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'update_issue_bin_allocation'])->name('update_issue_bin_allocation');
+Route::delete('/delete/{id}', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'delete_issue_bin_allocation'])->name('delete_issue_bin_allocation');
 /*==========search v ===========*/
 // Route::get('/view-issue-bin-allocate-', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'search_company'])->name('search_company');
 // Route::get('/view-issue-bin-allocate--', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'search_rackname'])->name('search_rackname');
