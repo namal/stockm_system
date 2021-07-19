@@ -131,7 +131,7 @@
                       data-parent="#sidebar-menu">
                       <div class="sub-menu">
                             <li><a class="sidenav-item-link" href="/create-issued"><span class="nav-text">Create</span></a></li>
-                            <li ><a class="sidenav-item-link" href="/view-issued"><span class="nav-text">View </span></a></li>
+                            <li ><a class="sidenav-item-link" href="/view-issue_all"><span class="nav-text">View </span></a></li>
                       </div>
                     </ul>
                   </li>

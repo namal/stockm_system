@@ -25,7 +25,7 @@
                         <div class="col-md-6">
                           <label class="text-dark mt-1 font-weight-medium" for="">Allocated Rack</label>
                       <div class="input-group bm-2">
-                        <select class="in-field-color form-control" id="isallocatedRack" name="isallocatedRack" value="" required>
+                        <select class="in-field-color form-control" id="isallocatedRack" name="" value="" required>
                           <option value="">---Select Allocated Rack---</option>
                           <option value="1">sd</option>
                               {{-- @foreach ($allo_racks as $allo_rack)
@@ -55,28 +55,26 @@
                         </div>
                       </div>
                       
-
-                      
                       <div class="row">
 
                         <div class="col-md-6">
                       <label class="text-dark mt-1 font-weight-medium" for="">Issued Batch No</label>
                       <div class="input-group bm-2">
-                          <input type="number" class="form-control in-field-color" name="rarackName" id="rarackName" placeholder="23.00" required>
+                          <input type="number" class="form-control in-field-color" name="isissuedBatchNo" id="isissuedBatchNo" placeholder="23.00" required>
                       </div>
                         </div>
 
                         <div class="col-md-6">
                       <label class="text-dark mt-1 font-weight-medium" for="">Issued Quantity</label>
                       <div class="input-group bm-2">
-                          <input  type="number" class="in-field-color form-control" id="ranote"  name="ranote" placeholder="23"  required>
+                          <input  type="number" class="in-field-color form-control" id="isissuedQuantity"  name="isissuedQuantity" placeholder="23"  required>
                       </div>
                     </div>
                   </div>
 
                       <label class="text-dark mt-1 font-weight-medium" for="">Issued Rolls Count</label>
                       <div class="input-group bm-2">
-                        <input  type="number" class="in-field-color form-control" id="ranote"  name="ranote" placeholder="23.00" rows="3" col="50" required>
+                        <input  type="number" class="in-field-color form-control" id="isissuedRollsCount"  name="isissuedRollsCount" placeholder="23.00" rows="3" col="50" required>
                       </div>
 
                       <div class="container mt-3">

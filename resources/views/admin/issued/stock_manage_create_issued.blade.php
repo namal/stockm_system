@@ -463,7 +463,7 @@
                 <i class="bi bi-plus-circle"></i>
                 Allocate Bin Location
               </a> --}}
-              <a type="button" class="w3-button w3-hover-black w3-blue w3-round-xxlarge" href="{{url('/view-issue-allocate-bin')}}" style="background-color: #e6951d;  width:220px; height:35px; padding: 5px; color:white;">
+              <a type="button" class="w3-button w3-hover-black w3-blue w3-round-xxlarge" href="/view-issue-bin-allocate_all" style="background-color: #e6951d;  width:220px; height:35px; padding: 5px; color:white;">
                 <i class="bi bi-binoculars-fill viewdedign"></i>
                 View Allocated Bin Location</a>
             </center>

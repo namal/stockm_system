@@ -18,11 +18,20 @@ class Stock_Management_Issue_Bin_Allocate extends Controller
     }
     public function show_issue_allocate_bin()
     {
-        $allocates = Stock_Manage_Issue_Bin_Allocate::paginate(15);
+        $issues = Stock_Manage_Issue_Bin_Allocate::paginate(15);
         // return view('stock_management_create_issue_allocate_bin', compact('issues'));
         // return redirect('/create-issue-allocate-bin', compact('issues'));
-        return view('admin.issue_bin_allocation.stock_manage_create_issue_bin_allocation', compact('allocates'));
+        return view('admin.issue_bin_allocation.stock_manage_view_issue_bin_allocation', compact('issues'));
     }
+
+    public function print_issue_allocate_bin()
+    {
+        $issues = Stock_Manage_Issue_Bin_Allocate::paginate(25);
+        // return view('stock_management_create_issue_allocate_bin', compact('issues'));
+        // return redirect('/create-issue-allocate-bin', compact('issues'));
+        return view('admin.issue_bin_allocation.print_issue_bin_allocate', compact('issues'));
+    }
+
     //************************* */
     // public function dropdown_allocate_rack_issue_allocate_bin(Request $request){
     //     $isallocatedRack = $request['isallocatedRack'];
@@ -61,6 +70,51 @@ class Stock_Management_Issue_Bin_Allocate extends Controller
         // return Redirect::back();
         // return back()->withInput();
     }
+
+    public function edit_issue_bin_allocation($id)
+    {
+        $allocates = Stock_Manage_Issue_Bin_Allocate::find($id);
+        // return redirect(url('/view-rack--'));
+        return view('admin.issue_bin_allocation.stock_manage_edit_issue_bin_allocation', compact('allocates'));
+    }
+
+    public function update_issue_bin_allocation(Request $request, $id)
+    {
+        Alert::success('Success', 'Edited Successfully');
+        $this->validate($request, [
+            'isissuedTotalQuantity' => 'required',
+            'isallocatedRack' => 'required',
+            'isallocatedBin' => 'required',
+            'isissuedBatchNo' => 'required',
+            'isissuedQuantity' => 'required',
+            'isissuedRollsCount' => 'required'
+        ]);
+        $allocates = Stock_Manage_Issue_Bin_Allocate::find($id);
+        $allocates->isissuedTotalQuantity = $request->isissuedTotalQuantity;
+        $allocates->isallocatedRack = $request->isallocatedRack;
+        $allocates->isallocatedBin = $request->isallocatedBin;
+        $allocates->isissuedBatchNo = $request->isissuedBatchNo;
+        $allocates->isissuedQuantity = $request->isissuedQuantity;
+        $allocates->isissuedRollsCount = $request->isissuedRollsCount;
+        $allocates->save();
+        // return view('admin.issue_bin_allocation.stock_manage_view_issue_bin_allocation', compact('issues'));
+
+        // return redirect('/view-issue-bin-allocate_all');
+        return redirect(url('/view-issue-bin-allocate_all'));
+        // return redirect('/create-issue-allocate-bin');
+        // return Redirect::back();
+        // return back()->withInput();
+    }
+
+    public function delete_issue_bin_allocation($id)
+    {
+        Stock_Manage_Issue_Bin_Allocate::find($id)->delete();
+        return redirect(url('/show_issue_allocate_bin'));
+        // return redirect(url('/view-issue-bin-allocate_all'));
+    }
+
+
+
 
     // public function store_issue_allocate_bin_(Request $request)
     // {

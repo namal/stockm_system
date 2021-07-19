@@ -264,14 +264,14 @@ class Stock_Management_Issued extends Controller
         return redirect(url('/create-issued'));
     }
 
-    function search_company(Request $request)
-    {
-        $searchcompany = $request['scompany'];
-        $issues = DB::table('stock__manage__issueds')
-            ->where('icompany', [$searchcompany])
-            ->get();
-        return view('admin.bin.stock_manage_view_issued', ['issues' => $issues]);
-    }
+    // function search_company(Request $request)
+    // {
+    //     $searchcompany = $request['scompany'];
+    //     $issues = DB::table('stock__manage__issueds')
+    //         ->where('icompany', [$searchcompany])
+    //         ->get();
+    //     return view('admin.bin.stock_manage_view_issued', ['issues' => $issues]);
+    // }
 
     public function edit_issue($id)
     {
