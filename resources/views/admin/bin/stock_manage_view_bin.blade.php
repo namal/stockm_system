@@ -36,16 +36,25 @@
         </div>
           <input class="mr-2 form-control in-field-color" type="text" id="inputBin" onkeyup="searchBin()" placeholder="Search bin..">
       </div>
-
-          {{-- <a class="mr-2 mb-2 px-3 py-2" class="" href="/view-bin_all" style="background-color: #e6951d; color:white; width:130px; border-radius: 15%;">
-            <i class="w3-spin fa fa-refresh mr-2"></i>Refresh</a> --}}
-          {{-- <a class="w3-btn btn-warning w3-round-xxlarge" href="/view-bin_all" style="background-color: #e6951d; color:white; width:130px;"><i class="w3-spin fa fa-refresh"></i>Refresh</a> --}}
-        <a class="w3-btn  btn-size w3-hover-black w3-round-xxlarge mb-3" href="/view-bin_all" type="button" style="background-color: #e6951d; color:white;">
-            <i class="w3-spin fa fa-refresh"></i> Refresh 
-        </a>
     </div>
 
+    <div class="row">
 
+      <div class="input-group mb-3">
+        <a class="btn btn-sm btn-warning mx-3" href="/view-bin_all" type="button" style="background-color: #e6951d; color:white; width:100px;">
+          <i class="fa fa-refresh "></i>  Refresh   
+        </a>
+        
+        <a class="btn btn-sm btn-info mx-3" type="button" style="color:white; width:100px;" href="/print-bin_all">
+          <i class="fa fa-print"></i>  Print
+        </a>
+      
+        {{--  <button class="btn btn-sm btn-danger mx-3" style="width:100px" onclick="javascript:demoFromHTML();">
+          <i class="fa fa-file-pdf-o "></i>  Pdf
+        </button>
+        <button onclick="javascript:demoFromHTML();">PDF</button>  --}}
+      </div>
+    </div>
     
     <div class="" style="">
       <table class="table table-responsive caption-top table-hover table-bordered text-center" id="myBinTable" >

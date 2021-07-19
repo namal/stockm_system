@@ -90,6 +90,8 @@ Route::post('/update-bin/{id}', [App\Http\Controllers\Stock_Management_Bin::clas
 Route::delete('/delete-bin/{id}', [App\Http\Controllers\Stock_Management_Bin::class, 'delete_bin'])->name('delete_bin');
 Route::get('/view-bin', [App\Http\Controllers\Stock_Management_Bin::class, 'search_company'])->name('search_company');
 Route::get('/view-bin_all', [App\Http\Controllers\Stock_Management_Bin::class, 'searchBinname'])->name('searchBinname');
+//print
+Route::get('/print-bin_all', [App\Http\Controllers\Stock_Management_Bin::class, 'print_bin'])->name('print_bin');
 
 
 //test
