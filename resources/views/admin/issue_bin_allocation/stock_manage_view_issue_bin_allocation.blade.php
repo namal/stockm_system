@@ -119,16 +119,6 @@
       <div class="" id="customers">
         <table class="table table-responsive table-sm caption-top table-hover table-bordered text-center" id="myIssueAllocationTable">
           
-          <colgroup>
-            <col width="20%">
-                <col width="20%">
-                    <col width="20%">
-                        <col width="20%">    
-                           <col width="20%">
-                        <col width="20%">
-                            <col width="20%">
-        </colgroup>
-          
           <thead class="text-center text-white" style="background:rgb(68, 68, 87); color: rgb(196, 193, 193)" >
             <tr class="">
               <th width="100px" scope="col" class="text-white">No</th>

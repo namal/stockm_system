@@ -51,7 +51,7 @@
       </div>
     
         <div class="" id="PDFcontent" style="" >
-          <p>hi welcome all to the great magic show</p>
+          
             <table class="table table-responsive caption-top table-hover table-bordered text-center" id="myTable">
                 <caption>List of racks created</caption>
                 <thead class=" text-center text-white" style="background:rgb(68, 68, 87); color: rgb(196, 193, 193)">
