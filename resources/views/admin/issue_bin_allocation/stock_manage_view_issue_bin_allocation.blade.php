@@ -1,3 +1,4 @@
+
 @extends('admin.stock_manage_admin_dash')
 @section('admin')
 {{-- <!-- jQuery library -->
@@ -13,6 +14,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.5/jspdf.plugin.autotable.min.js"></script>
 
 
+{{--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  --}}
 
 
 <div class="container-responsive mx-0"> <!--d1-->
@@ -104,7 +107,7 @@
           <i class="fa fa-print"></i>  Print
         </a>
       
-        <button class="btn btn-sm btn-danger mx-3" style="width:100px" onclick="generatePDF()">
+        <button class="btn btn-sm btn-danger mx-3" style="width:100px" onclick="javascript:demoFromHTML();">
           <i class="fa fa-file-pdf-o "></i>  Pdf
         </button>
         <button onclick="javascript:demoFromHTML();">PDF</button>
@@ -115,6 +118,17 @@
 
       <div class="" id="customers">
         <table class="table table-responsive table-sm caption-top table-hover table-bordered text-center" id="myIssueAllocationTable">
+          
+          <colgroup>
+            <col width="20%">
+                <col width="20%">
+                    <col width="20%">
+                        <col width="20%">    
+                           <col width="20%">
+                        <col width="20%">
+                            <col width="20%">
+        </colgroup>
+          
           <thead class="text-center text-white" style="background:rgb(68, 68, 87); color: rgb(196, 193, 193)" >
             <tr class="">
               <th width="100px" scope="col" class="text-white">No</th>
