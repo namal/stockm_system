@@ -18,7 +18,7 @@ class Stock_Management_Rack extends Controller
     public function show_rack()
     {
         // Alert::success('Success Title', 'Success Message');
-        $racks = Stock_Manage_Rack::paginate(2);
+        $racks = Stock_Manage_Rack::paginate(20);
         return view('admin.rack.stock_manage_view_rack', compact('racks'));
     }
 
@@ -136,5 +136,13 @@ class Stock_Management_Rack extends Controller
         $racks = Stock_Manage_Rack::pluck('rarackName', 'id');
         $racompany = 'rarackName';
         return view('admin.rack.stock_manage_view_rack', compact('id', 'racks'));
+    }
+
+    public function print_rack()
+    {
+        $racks = Stock_Manage_Rack::paginate(20);
+        // return view('stock_management_create_issue_allocate_bin', compact('issues'));
+        // return redirect('/create-issue-allocate-bin', compact('issues'));
+        return view('admin.rack.print_rack', compact('racks'));
     }
 }

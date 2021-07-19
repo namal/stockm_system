@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 <div class="container"> <!--d1-->
-    <h3 class="m-0 pt-0 mb-3 w3-animate-left">
-        <span class="font-weight-bold text-center">Bin Allocation for Issued Materials </span> <button onclick="window.print()"><i class="bi bi-printer text-primary"></i></button>
-    
+    <h3 class="m-0 pt-0 mb-3">
+        <span class="font-weight-bold text-center">Bin Allocation for Issued Materials </span> 
+        <button onclick="window.print()"><i class="bi bi-printer text-primary"></i></button>
     </h3>
       
     <div class="bg-light">

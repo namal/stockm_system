@@ -13,7 +13,7 @@ class Stock_Management_Bin extends Controller
     public function show_bin()
     {
         //alert()->success('SuccessAlert', 'Lorem ipsum dolor sit amet.');
-        $bins = Stock_Manage_Bin::paginate(5)->withQueryString();
+        $bins = Stock_Manage_Bin::paginate(25)->withQueryString();
         return view('admin.bin.stock_manage_view_bin', compact('bins'));
     }
 
@@ -176,5 +176,13 @@ class Stock_Management_Bin extends Controller
         //Alert::success('Successfully deleted!', session('success_msg'));
         Stock_Manage_Bin::find($id)->delete();
         return redirect(url('/view-bin_all'));
+    }
+
+    public function print_bin()
+    {
+        $bins = Stock_Manage_Bin::paginate(20);
+        // return view('stock_management_create_issue_allocate_bin', compact('issues'));
+        // return redirect('/create-issue-allocate-bin', compact('issues'));
+        return view('admin.bin.print_bin', compact('bins'));
     }
 }

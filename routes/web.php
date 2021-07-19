@@ -90,6 +90,8 @@ Route::post('/update-bin/{id}', [App\Http\Controllers\Stock_Management_Bin::clas
 Route::delete('/delete-bin/{id}', [App\Http\Controllers\Stock_Management_Bin::class, 'delete_bin'])->name('delete_bin');
 Route::get('/view-bin', [App\Http\Controllers\Stock_Management_Bin::class, 'search_company'])->name('search_company');
 Route::get('/view-bin_all', [App\Http\Controllers\Stock_Management_Bin::class, 'searchBinname'])->name('searchBinname');
+//print
+Route::get('/print-bin_all', [App\Http\Controllers\Stock_Management_Bin::class, 'print_bin'])->name('print_bin');
 
 
 //test
@@ -113,6 +115,9 @@ Route::delete('/delete-rack/{id}', [App\Http\Controllers\Stock_Management_Rack::
 /*==========search rack ===========*/
 Route::get('/view-rack-', [App\Http\Controllers\Stock_Management_Rack::class, 'search_company'])->name('search_company');
 Route::get('/view-rack--', [App\Http\Controllers\Stock_Management_Rack::class, 'search_rackname'])->name('search_rackname');
+Route::get('/print-rack_all', [App\Http\Controllers\Stock_Management_Rack::class, 'print_rack'])->name('print_rack');
+
+
 
 //received
 // //side bar-> received
@@ -154,6 +159,7 @@ Route::get('/create-issue-bin-allocate', function () {
 
 /*==========issue-bin-allocate==========*/
 Route::get('/view-issue-bin-allocate_all', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'show_issue_allocate_bin'])->name('show_issue_allocate_bin');
+//print
 Route::get('/print-issue-bin-allocate_all', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'print_issue_allocate_bin'])->name('print_issue_allocate_bin');
 Route::get('/create-issue-bin-allocate', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'create_issue_allocate_bin'])->name('create_issue_allocate_bin');
 // Route::get('/create-issue-bin-allocate', [App\Http\Controllers\Stock_Management_Issue_Bin_Allocate::class, 'getRackCompanies'])->name('getRackCompanies');
