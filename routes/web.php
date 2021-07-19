@@ -52,6 +52,9 @@ Route::delete('/delete-issued/{id}', [App\Http\Controllers\Stock_Management_Issu
 // Route::get('/view-issued', [App\Http\Controllers\Stock_Management_Issued::class, 'search_company'])->name('search_company');
 Route::get('/view-issued-', [App\Http\Controllers\Stock_Management_Issued::class, 'search_rackname'])->name('search_rackname');
 
+//print
+Route::get('/print-issue_all', [App\Http\Controllers\Stock_Management_Issued::class, 'print_issues'])->name('print_issues');
+
 // Route::get('/create-issue-allocate-bin', [App\Http\Controllers\StockManagement_Issue_Bin_Allocation::class, 'create_issue_allocate_bin'])->name('create_issue_allocate_bin');
 // Route::post('/create-issue-allocate-bin', [App\Http\Controllers\StockManagement_Issue_Bin_Allocation::class, 'store_issue_allocate_bin'])->name('store_issue_allocate_bin');
 // Route::get('/view-issue-allocate-bin', [App\Http\Controllers\StockManagement_Issue_Bin_Allocation::class, 'show_issue_allocate_bin'])->name('show_issue_allocate_bin');
