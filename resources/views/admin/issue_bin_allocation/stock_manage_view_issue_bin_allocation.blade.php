@@ -1,4 +1,3 @@
-
 @extends('admin.stock_manage_admin_dash')
 @section('admin')
 {{-- <!-- jQuery library -->
@@ -23,8 +22,6 @@
         <span class="font-weight-bold">View - </span>
         <span class="">Bin Allocation for Issued Materials</span>
     </h3>
-
-
 
     <div class="bg-light">
       <div class="row">
@@ -61,7 +58,7 @@
             <i class="fa fa-refresh mr-2"></i> Refresh   
         </a> --}}
           
-      </div>
+      {{--  </div>  --}}
       
 
       </div>

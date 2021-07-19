@@ -12,7 +12,8 @@ class Stock_Management_Issued extends Controller
 {
     public function show_issue()
     {
-        $issues = Stock_Manage_Issued::all();
+        $issues = Stock_Manage_Issued::paginate(20);
+        // $issues = Stock_Manage_Issued::all();
         return view('admin.issued.stock_manage_view_issued', compact('issues'));
     }
 
@@ -342,5 +343,13 @@ class Stock_Management_Issued extends Controller
             ->get();
         $ibuyer = 'ibuyer';
         return view('admin.bin.stock_manage_view_issued', compact('issues'));
+    }
+
+    public function print_issues()
+    {
+        $issues = Stock_Manage_Issued::paginate(20);
+        // return view('stock_management_create_issue_allocate_bin', compact('issues'));
+        // return redirect('/create-issue-allocate-bin', compact('issues'));
+        return view('admin.issued.print_issue', compact('issues'));
     }
 }
