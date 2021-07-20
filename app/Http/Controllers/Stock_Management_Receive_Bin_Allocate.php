@@ -7,7 +7,7 @@ use App\Models\Stock_Manage_Receive_Bin_Allocate;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class Stock_Management_Received_Bin_Allocate extends Controller
+class Stock_Management_Receive_Bin_Allocate extends Controller
 {
     public function create_receive_allocate_bin()
     {
@@ -93,7 +93,7 @@ class Stock_Management_Received_Bin_Allocate extends Controller
     public function delete_receive_bin_allocation($id)
     {
         Stock_Manage_Receive_Bin_Allocate::find($id)->delete();
-        return redirect(url('/show_receive_allocate_bin'));
+        return redirect(url('/view-receive-bin-allocate_all'));
         // return redirect(url('/view-receive-bin-allocate_all'));
     }
 }
