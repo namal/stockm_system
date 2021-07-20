@@ -150,9 +150,31 @@ Route::delete('/delete-received/{id}', [App\Http\Controllers\Stock_Management_Re
 /*==========search rack ===========*/
 // Route::get('/view-received', [App\Http\Controllers\Stock_Management_Received::class, 'search_company'])->name('search_company');
 // Route::get('/view-received-', [App\Http\Controllers\Stock_Management_Received::class, 'search_rackname'])->name('search_rackname');
-Route::get('/create-receive-allocate-bin', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocation::class, 'create_receive_allocate_bin'])->name('create_receive_allocate_bin');
-Route::post('/create-receive-allocate-bin', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocation::class, 'store_receive_allocate_bin'])->name('store_receive_allocate_bin');
-Route::get('/view-receive-allocate-bin', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocation::class, 'show_receive_allocate_bin'])->name('show_receive_allocate_bin');
+// Route::get('/create-receive-allocate-bin', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocation::class, 'create_receive_allocate_bin'])->name('create_receive_allocate_bin');
+// Route::post('/create-receive-allocate-bin', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocation::class, 'store_receive_allocate_bin'])->name('store_receive_allocate_bin');
+// Route::get('/view-receive-allocate-bin', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocation::class, 'show_receive_allocate_bin'])->name('show_receive_allocate_bin');
+
+
+
+/*==========receive-bin-allocate==========*/
+Route::get('/view-receive-bin-allocate_all', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocate::class, 'show_receive_allocate_bin'])->name('show_receive_allocate_bin');
+//print
+Route::get('/print-receive-bin-allocate_all', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocate::class, 'print_receive_allocate_bin'])->name('print_receive_allocate_bin');
+Route::get('/create-receive-bin-allocate', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocate::class, 'create_receive_allocate_bin'])->name('create_receive_allocate_bin');
+// Route::get('/create-receive-bin-allocate', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocate::class, 'getRackCompanies'])->name('getRackCompanies');
+Route::post('/create-receive-bin-allocate', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocate::class, 'store_receive_allocate_bin'])->name('store_receive_allocate_bin');
+// Route::get('/rack-bin', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocate::class, 'select_country']);
+/*=========== edit receive-bin-allocate==========*/
+Route::get('/edit-issue-allocate/{id}', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocate::class, 'edit_receive_bin_allocation'])->name('edit_receive_bin_allocation');
+Route::post('/update-issue-allocate/{id}', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocate::class, 'update_receive_bin_allocation'])->name('update_receive_bin_allocation');
+Route::delete('/delete-issue-allocate/{id}', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocate::class, 'delete_receive_bin_allocation'])->name('delete_receive_bin_allocation');
+/*==========search v ===========*/
+// Route::get('/view-issue-bin-allocate-', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocate::class, 'search_company'])->name('search_company');
+// Route::get('/view-issue-bin-allocate--', [App\Http\Controllers\Stock_Management_Receive_Bin_Allocate::class, 'search_rackname'])->name('search_rackname');
+
+
+
+
 
 //issue_bin_allocation
 //test

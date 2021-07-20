@@ -34,7 +34,7 @@
                   <i class="fa fa-search"></i>
               </span>
           </div>
-          <input class="form-control in-field-color" type="text" id="allocatedRack" onkeyup="searchAllocatedRack()" placeholder="Search by Allocated Rack..">
+          <input class="form-control in-field-color" type="text" id="reallocatedRack" onkeyup="searchAllocatedRack()" placeholder="Search by Allocated Rack..">
       </div>
 
       <div class="col-3 input-group mb-3">
@@ -43,7 +43,7 @@
                 <i class="fa fa-search"></i>
             </span>
         </div>
-        <input class="form-control in-field-color" type="text" id="allocatedBin" onkeyup="searchAllocatedBin()" placeholder="Search by Allocated Bin..">
+        <input class="form-control in-field-color" type="text" id="reallocatedBin" onkeyup="searchAllocatedBin()" placeholder="Search by Allocated Bin..">
     </div>
 
     <div class="col-3 input-group mb-3">
@@ -52,50 +52,11 @@
                     <i class="fa fa-search"></i>
                 </span>
             </div>
-            <input class="form-control in-field-color" type="text" id="batchNo" onkeyup="searchBatchNo()" placeholder="Search by Batch No..">
+            <input class="form-control in-field-color" type="text" id="rereceivedBatchNo" onkeyup="searchBatchNo()" placeholder="Search by Batch No..">
         </div>
-        
-        {{-- <div class="col-3 input-group mb-3">
-          <a class="btn-sm  btn-warning mb-3" href="/view-receive-bin-allocate_all" type="button" style="background-color: #e6951d; color:white;">
-            <i class="fa fa-refresh mr-2"></i> Refresh   
-        </a> --}}
-          
-      {{--  </div>  --}}
-      
-
       </div>
 
-      <div class="row">
-
-        <div class="col-3 input-group mb-3">
-          <div class="input-group-prepend">
-              <span class="input-group-text bg-secondary text-white">
-                  <i class="fa fa-search"></i>
-              </span>
-          </div>
-          <input class="form-control in-field-color" type="text" id="allocatedRack" onkeyup="searchAllocatedRack()" placeholder="Search by Allocated Rack..">
-      </div>
-
-      <div class="col-3 input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text bg-secondary text-white">
-                <i class="fa fa-search"></i>
-            </span>
-        </div>
-        <input class="form-control in-field-color" type="text" id="allocatedBin" onkeyup="searchAllocatedBin()" placeholder="Search by Allocated Bin..">
-    </div>
-
-    {{-- <div class="col-3 input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text bg-secondary text-white">
-                    <i class="fa fa-search"></i>
-                </span>
-            </div>
-            <input class="form-control in-field-color" type="text" id="batchNo" onkeyup="searchBatchNo()" placeholder="Search by Batch No..">
-        </div> --}}
-        
-      </div>
-      <div class="row">
+    <div class="row">
 
       <div class="input-group mb-3">
         <a class="btn btn-sm btn-warning mx-3" href="/view-receive-bin-allocate_all" type="button" style="background-color: #e6951d; color:white; width:100px;">
@@ -121,9 +82,9 @@
           <thead class="text-center text-white" style="background:rgb(68, 68, 87); color: rgb(196, 193, 193)" >
             <tr class="">
               <th width="100px" scope="col" class="text-white">No</th>
-              <th width="200px" scope="col" class="text-white">received Tot</th>
-              <th width="200px" scope="col" class="text-white">Aallo Rack</th>
-              <th width="200px" scope="col" class="text-white">Aallo Bin</th>
+              <th width="200px" scope="col" class="text-white">Received Tot</th>
+              <th width="200px" scope="col" class="text-white">Allo Rack</th>
+              <th width="200px" scope="col" class="text-white">Allo Bin</th>
               <th width="200px" scope="col" class="text-white">Batch No</th>
               <th width="200px" scope="col" class="text-white">Quantity</th>
               <th width="200px" scope="col" class="text-white">Rolls</th>
@@ -132,15 +93,15 @@
           </thead>
           <tbody>
          
-            {{--  @foreach ($receives as $receive)
+            @foreach ($receives as $receive)
             <tr class="bg-white">
               <th scope="row">{{ $receive->id }}</th>
-              <td>{{$receive->isreceivedTotalQuantity}}</td>
-              <td>{{$receive->isallocatedRack}}</td>
-              <td>{{$receive->isallocatedBin}}</td>
-              <td>{{$receive->isreceivedBatchNo}}</td>
-              <td>{{$receive->isreceivedQuantity}}</td>
-              <td>{{$receive->isreceivedRollsCount}}</td>
+              <td>{{$receive->rereceivedTotalQuantity}}</td>
+              <td>{{$receive->reallocatedRack}}</td>
+              <td>{{$receive->reallocatedBin}}</td>
+              <td>{{$receive->rereceivedBatchNo}}</td>
+              <td>{{$receive->rereceivedQuantity}}</td>
+              <td>{{$receive->rereceivedRollsCount}}</td>
               <td> 
                             
                 <a class="btn btn-sm btn-raised btn-primary mx-1" href="{{ route('edit_receive_bin_allocation', $receive->id) }}" class="">
@@ -164,13 +125,13 @@
               </td>
               
             </tr>
-         @endforeach    --}}
+         @endforeach  
 
           </tbody>
         </table>
-        {{--  <div class="d-flex justify-content-left mb-5 font-weight-bold">
+        <div class="d-flex justify-content-left mb-5 font-weight-bold">
             {!! $receives->links() !!}
-        </div>  --}}
+        </div>
 
 </div>
 
@@ -178,7 +139,7 @@
 <script>
   function searchAllocatedRack() {
     var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("allocatedRack");
+    input = document.getElementById("reallocatedRack");
     filter = input.value.toUpperCase();
     table = document.getElementById("myreceiveAllocationTable");
     tr = table.getElementsByTagName("tr");
@@ -197,7 +158,7 @@
 
   function searchAllocatedBin() {
     var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("allocatedBin");
+    input = document.getElementById("reallocatedBin");
     filter = input.value.toUpperCase();
     table = document.getElementById("myreceiveAllocationTable");
     tr = table.getElementsByTagName("tr");
@@ -216,7 +177,7 @@
 
   function searchBatchNo() {
     var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("batchNo");
+    input = document.getElementById("rereceivedBatchNo");
     filter = input.value.toUpperCase();
     table = document.getElementById("myreceiveAllocationTable");
     tr = table.getElementsByTagName("tr");
