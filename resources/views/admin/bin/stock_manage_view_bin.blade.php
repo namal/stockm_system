@@ -1,6 +1,3 @@
-{{-- <script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.1.min.js" > </script>
-<script type="text/javascript" src="http://www.kunalbabre.com/projects/table2CSV.js" > </script> --}}
-
 @extends('admin.stock_manage_admin_dash')
 @section('admin')
 <div class="container-responsive"> <!--d1-->
@@ -8,12 +5,6 @@
     <span class="font-weight-bold">View - </span>
     <span class="">Bin Details</span>
   </h3>
-
-  {{-- <div class="d-flex justify-content-end mb-4">
-    <a class="btn btn-primary" href="{{ URL::to('#') }}">Export to PDF</a>
-    <a class="btn btn-primary" href="/bins/pdf">Export to PDF</a>
-</div> --}}
-
   <div class="bg-light">
     <div  class="row mb-0" style="">
       <div class="col-3 input-group mb-3">

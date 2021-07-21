@@ -25,6 +25,12 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 	return view('admin.stock_manage_admin_index');
 })->name('dashboard');
 
+//summary 
+Route::get('/summary', function () {
+	return view('admin.summary.stock_manage_summary');
+});
+
+//issues
 Route::get('/create-issued', function () {
 	return view('admin.issued.stock_manage_create_issued');
 });

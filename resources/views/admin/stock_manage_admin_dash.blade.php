@@ -154,8 +154,8 @@
                   </li>
 
                   <li  class="has-sub" >
-                    <a class="sidenav-item-link" href="/summary" data-toggle="collapse" data-target="#summary"
-                      aria-expanded="false" aria-controls="summary">
+                    <a class="sidenav-item-link" href="/summary">
+                    
                       <i class="mdi mdi-view-dashboard-outline"></i>
                       <span class="nav-text">Summary</span>
                     </a>

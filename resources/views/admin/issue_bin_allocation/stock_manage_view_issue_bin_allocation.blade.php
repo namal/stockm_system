@@ -79,6 +79,9 @@
         <a class="btn btn-sm btn-info mx-3" type="button" style="color:white; width:100px;" href="/print-issue-bin-allocate_all">
           <i class="fa fa-print"></i>  Print
         </a>
+        <a class="btn btn-sm btn-success mx-3" type="button" style="color:white; width:100px;" href="/print-issue-bin-allocate_all">
+          <i class="fa fa-file-excel-o"></i> CSV
+        </a>
         <button class="btn btn-sm btn-danger mx-3" style="width:100px" onclick="javascript:demoFromHTML();">
           <i class="fa fa-file-pdf-o "></i>  Pdf
         </button>
