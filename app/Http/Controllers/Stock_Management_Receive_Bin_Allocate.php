@@ -15,7 +15,8 @@ class Stock_Management_Receive_Bin_Allocate extends Controller
     }
     public function show_receive_allocate_bin()
     {
-        $receives = Stock_Manage_Receive_Bin_Allocate::paginate(15);
+        $receives = Stock_Manage_Receive_Bin_Allocate::latest()->paginate(15);
+        // $receives = Stock_Manage_Receive_Bin_Allocate::paginate(15);
         // return view('stock_management_create_receive_allocate_bin', compact('receives'));
         // return redirect('/create-receive-allocate-bin', compact('receives'));
         return view('admin.receive_bin_allocation.stock_manage_view_receive_bin_allocation', compact('receives'));

@@ -14,7 +14,8 @@ class CreateStockManageReceiveBinAllocatesTable extends Migration
     public function up()
     {
         Schema::create('stock__manage__receive__bin__allocates', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            // $table->bigIncrements('id');
+            $table->id('');
             $table->double('rereceivedTotalQuantity');
             $table->string('reallocatedRack');
             $table->string('reallocatedBin');
