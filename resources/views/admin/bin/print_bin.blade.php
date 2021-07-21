@@ -43,7 +43,6 @@
   </div>
 </div>
   
-
 <script>  
   //user-defined function to download CSV file  
   function downloadCSV(csv, filename) {  
@@ -56,7 +55,6 @@
       downloadLink.download = filename;  
       downloadLink.href = window.URL.createObjectURL(csvFile);  
       downloadLink.style.display = "none";  
-    
       document.body.appendChild(downloadLink);  
       downloadLink.click();  
   }  
