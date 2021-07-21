@@ -18,14 +18,15 @@
                     </tr>
                 </thead>
                 <tbody >
-                    @foreach ($racks as $rack   )
+                    @php($i=1)
+                    @foreach ($racks as $rack)
                     <tr class="bg-white">
-                        <th scope="row">{{ $rack->id }}</th>
+                        <th scope="row">{{ $i++ }}</th>
                         <td>{{$rack->racompany}}</td>
                         <td>{{$rack->rarackName}}</td>
                         <td>{{$rack->ranote}}</td>
                     </tr>
-                @endforeach 
+                    @endforeach 
                 </tbody>
             </table>
             <div class="d-flex justify-content-left font-weight-bold text-primary">

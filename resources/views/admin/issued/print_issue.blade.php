@@ -6,14 +6,9 @@
       <span class="font-weight-bold text-center">Issued Materials</span>
       <button onclick="window.print()"><i class="bi bi-printer text-primary"></i></button>
     </h3>
-    <!--search -->
-    <div class="bg-light" style="">
- 
-    </div>
- 
-        <div class="" id="">
-            <table class="table-responsive table-sm caption-top table-bordered text-center" id="">
-                <caption>List of materials issued</caption>
+    <div class="" id="">
+        <table class="table-responsive table-sm caption-top table-bordered text-center" id="">
+            <caption>List of materials issued</caption>
                 <thead class=" text-center text-dark">
                     <tr class="">
                         <th width="50px">No</th>
@@ -34,9 +29,10 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @php($i=1)
                 @foreach ($issues as $issue)
                 <tr class="bg-white">
-                    <th scope="row">{{ $issue -> id }}</th>
+                    <th scope="row">{{ $i++ }}</th>
                     <td>{{ $issue -> ibuyer }}</td>
                     <td>{{ $issue -> iseason }}</td>
                     <td>{{ $issue -> istyle }}</td>
@@ -58,7 +54,6 @@
                             {{ csrf_field() }}
                             {{ method_field('delete') }}
                         </form>  
-
                         <button onclick="
                             if(confirm('Are you sure to delete data?')){
                                 event.preventDefault();
@@ -73,14 +68,9 @@
                 </tr>
                 @endforeach
             </tbody>
-            </table>  
-
+        </table>  
             {{--  <div class="d-flex justify-content-left mb-5 font-weight-bold">
               {!! $issues->links() !!}
           </div>  --}}
-
-        </div>
-     
-   
-
-
+    </div>
+</div>

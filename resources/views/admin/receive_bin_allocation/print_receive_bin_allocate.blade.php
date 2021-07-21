@@ -22,9 +22,11 @@
                 </tr>
             </thead>
             <tbody>
-            @foreach ($receives as $receive)
+                {{-- <th scope="row">{{ @php($i=1) }}</th> --}}
+                @php($i=1)
+                @foreach ($receives as $receive)
                 <tr class="bg-white">
-                    <th scope="row">{{ $receive->id }}</th>
+                    <th scope="row">{{ $i++ }}</th>
                     <td>{{$receive->rereceivedTotalQuantity}}</td>
                     <td>{{$receive->reallocatedRack}}</td>
                     <td>{{$receive->reallocatedBin}}</td>
@@ -32,12 +34,13 @@
                     <td>{{$receive->rereceivedQuantity}}</td>
                     <td>{{$receive->rereceivedRollsCount}}</td>
                 </tr>
-            @endforeach             
+                @endforeach             
             </tbody>
         </table>
         <div class="d-flex justify-content-left mb-5 font-weight-bold">
             {!! $receives->links() !!}
         </div>
+    </div>    
 </div>
 
 
