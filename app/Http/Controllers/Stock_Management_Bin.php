@@ -7,6 +7,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\Stock_Manage_Bin;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
+// use Barryvdh\DomPDF\Facade as PDF;
 
 class Stock_Management_Bin extends Controller
 {
@@ -185,4 +186,17 @@ class Stock_Management_Bin extends Controller
         // return redirect('/create-issue-allocate-bin', compact('issues'));
         return view('admin.bin.print_bin', compact('bins'));
     }
+
+    // public function createPDF()
+    // {
+    //     // retreive all records from db
+    //     $bin = Stock_Manage_Bin::all();
+
+    //     // share data to view
+    //     view()->share('bins', $bin);
+    //     $pdf = PDF::loadView('admin.bin.stock_manage_view_bin', $bin);
+
+    //     // download PDF file with download method
+    //     return $pdf->download('pdf_file.pdf');
+    // }
 }

@@ -1,11 +1,19 @@
+{{-- <script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.1.min.js" > </script>
+<script type="text/javascript" src="http://www.kunalbabre.com/projects/table2CSV.js" > </script> --}}
+
 @extends('admin.stock_manage_admin_dash')
 @section('admin')
-
 <div class="container-responsive"> <!--d1-->
   <h3 class="mb-3 w3-animate-left">
     <span class="font-weight-bold">View - </span>
     <span class="">Bin Details</span>
   </h3>
+
+  {{-- <div class="d-flex justify-content-end mb-4">
+    <a class="btn btn-primary" href="{{ URL::to('#') }}">Export to PDF</a>
+    <a class="btn btn-primary" href="/bins/pdf">Export to PDF</a>
+</div> --}}
+
   <div class="bg-light">
     <div  class="row mb-0" style="">
       <div class="col-3 input-group mb-3">
@@ -41,14 +49,13 @@
         <a class="btn btn-sm btn-info mx-3" type="button" style="color:white; width:100px;" href="/print-bin_all">
           <i class="fa fa-print"></i>  Print
         </a>
-        {{--  <button class="btn btn-sm btn-danger mx-3" style="width:100px" onclick="javascript:demoFromHTML();">
-          <i class="fa fa-file-pdf-o "></i>  Pdf
-        </button>
-        <button onclick="javascript:demoFromHTML();">PDF</button>  --}}
+        <a class="btn btn-sm btn-success mx-3" type="button" style="color:white; width:100px;" href="/print-bin_all">
+          <i class="fa fa-file-excel-o"></i> CSV
+        </a>
       </div>
     </div> 
     <div class="" style="">
-      <table class="table table-responsive caption-top table-hover table-bordered text-center" id="myBinTable" >
+      <table class="table table-responsive caption-top table-hover table-bordered text-center" id="myBinTable">
         <caption>List of bins created</caption>
           <thead class=" text-center" style="background:rgb(68, 68, 87); color: rgb(196, 193, 193)">
             <tr>
