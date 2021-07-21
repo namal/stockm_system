@@ -95,7 +95,8 @@ Route::get('/view-bin', [App\Http\Controllers\Stock_Management_Bin::class, 'sear
 Route::get('/view-bin_all', [App\Http\Controllers\Stock_Management_Bin::class, 'searchBinname'])->name('searchBinname');
 //print
 Route::get('/print-bin_all', [App\Http\Controllers\Stock_Management_Bin::class, 'print_bin'])->name('print_bin');
-
+//pdf
+// Route::get('/bins/pdf', [App\Http\Controllers\Stock_Management_Bin::class, 'createPDF'])->name('createPDF');
 
 //test
 Route::get('/create-rack', function () {
